@@ -20,17 +20,18 @@ Controllers
 
         Business logic is managed in the domain model layer. 
 	For a web or REST client the domain layer is exposed as resources represented by URIs
-	via the controllers and the REST api definition in con/routes
+	via the controllers and the REST api definition in conf/routes
 	Like the HTTP interface, controllers are procedural and Request/Response oriented.
 
 	NOTE: 
 	* Play will automatically manage transactions for you. 
 	* It will start a transaction for each HTTP request and commit it when the HTTP 
   	response is sent
+
 	More interesting reads about controllers can be found here:
 	http://www.playframework.com/documentation/1.2.3/controllers
 	(Play documentation are resources so make sure you refer to the latest doc rest service 
-	version, 1.2.3 at the time of writing this readme )
+	version, 1.2.3 at the time this writing )
      
 
 Views
