@@ -28,7 +28,7 @@ public class TransactionManager extends Controller {
 			.listTransactions(0, "description", "asc", ""));
 
 	/**
-	 * Defines a form wrapping the Contact class.
+	 * Defines a form wrapping a Transaction class.
 	 */
 	final static Form<Transaction> transactionForm = form(Transaction.class);
 
