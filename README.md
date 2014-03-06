@@ -43,10 +43,12 @@ Services
 ***********************************************************************  
 
 1. Download and install Play 2 distributions
+	
 	You can use the install-play goal to download and install Play 2 distributions.
+
 	1.1 From a nix prompt / windows cygwin or Mac terminal issue the following command:
  
-	export PLAY2_HOME=<yourBaseInstallationLoaction> 
+	export PLAY2_HOME=YourInstallDir
 
 	1.2 Now let’s install play using the following command 
 
@@ -56,16 +58,18 @@ Services
 2. Clone or fork this repo
 
 3. Building and deploying the Double Entry demo
+	
 	3.1 cd to the base directory where you cloned the source code: 
 
-	from within double-entry-mvn directory, to build the app run: mvn clean install
+	from within double-entry-mvn directory
+	
+	3.2 To build the app simply use: mvn clean install
 
 	3.2 To run the demo use:  play run
 
 	click  this url:  http://localhost:9000
-	The first time the app runs it will prompt you for running H2 
-    test DB setup- click on: Apply this script now
-    (The sql scripts located in conf/evolution/default)
+	The first time the app runs it will prompt you for running H2 test DB setup- click on: Apply this script now
+    	(The sql scripts located in conf/evolution/default)
 
 
 	NOTE:
