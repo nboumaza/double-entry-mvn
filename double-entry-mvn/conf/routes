@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# The router is the component in charge of translating each incoming HTTP request to an Action.
+#An HTTP request is seen as an event by the MVC framework. This event contains two major pieces of information:
+#the request path (e.g. /clients/1542, /photos/list), including the query string
+#the HTTP method (e.g. GET, POST, …).
+# ~~~~
+
+#------------------------------------------------------------------
+# Acount specific routes
+#------------------------------------------------------------------
+# Default path will just redirect to the account listAccounts
+GET     /                           controllers.AccountManager.index()
+
+# Accounts listAccounts 
+GET     /accounts                  controllers.AccountManager.listAccounts(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+
+# Add account
+GET     /accounts/new              controllers.AccountManager.create()
+POST    /accounts                  controllers.AccountManager.save()
+
+# Delete an account  - to absolete an account...But then what happens to its debit or credit value...?:)
+#POST    /accounts/:id/delete       controllers.AccountManager.delete(id:Long)
+
+#------------------------------------------------------------------
+# Transaction specific routes  IMPORTANT:  listing order matters
+# new needs to preceed :id ...See Routes priority rules in http://www.playframework.com/documentation/1.0/routes
+#------------------------------------------------------------------
+GET     /transactions              controllers.TransactionManager.listTransactions(p:Int ?= 0, s ?= "description", o ?= "asc", f ?= "")
+GET     /transactions/new          controllers.TransactionManager.create()
+GET     /transactions/:id          controllers.TransactionManager.listAccountTransactions(id:Long)
+POST    /transactions              controllers.TransactionManager.save()
+
+#------------------------------------------------------------------
+# Static resources -;) http://localhost:9000/assets/ZazieBoumaza.jpg
+#------------------------------------------------------------------
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+

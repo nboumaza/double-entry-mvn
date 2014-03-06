@@ -1,0 +1,10 @@
+/logs
+/project/project
+/project/target
+/target
+/*.iml
+/.eclipse
+/.settings
+/db.h2.db
+/testdb.h2.db
+/.classpath

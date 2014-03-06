@@ -1,0 +1,5 @@
+# Messages
+
+accounts.listAccounts.title={0,choice,0#No accounts|1#One account|1<{0,number,integer} accounts} found
+accounts.listTransactions.title={0,choice,0#No transactions|1#One transaction|1<{0,number,integer} transactions} found
+

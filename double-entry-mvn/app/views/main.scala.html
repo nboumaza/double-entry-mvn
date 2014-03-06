@@ -1,0 +1,34 @@
+@(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accounts database</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")"> 
+    </head>
+    <body>
+         <div class="topbar">
+            <div class="fill">
+             <h1 class="container">
+             	<a href="@routes.AccountManager.index()">
+                    Sample Play Web Accounting Demo &mdash; Two Legged Transaction
+                </a>
+             </h1>
+                <div class="container">
+                    <a class="brand" href="@routes.AccountManager.listAccounts()">Account List</a>
+                    <ul class="nav">                     
+                        <li>
+                            <a href="@routes.TransactionManager.listTransactions()">Transaction History</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <section id="main">
+            @content
+        </section>
+        
+    </body>
+</html>

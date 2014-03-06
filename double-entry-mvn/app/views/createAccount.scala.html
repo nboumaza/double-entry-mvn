@@ -1,0 +1,35 @@
+@(accountForm: Form[Account])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main {
+    
+    <h1>Add a new account</h1>
+    
+    @form(routes.AccountManager.save()) {
+        
+        <fieldset>
+        
+            @inputText(accountForm("name"), '_label -> "Account name")
+            @inputText(accountForm("value"), '_label -> "Initial Value")
+
+            @select(
+                accountForm("accountType.id"), 
+                options(AccountType.options), 
+                '_label -> "AccountType", '_default -> "-- Choose a accountType --",
+                '_showConstraints -> false
+            )
+            
+
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Create this account" class="btn primary"> or 
+            <a href="@routes.AccountManager.listAccounts()" class="btn">Cancel</a> 
+        </div>
+        
+    }
+    
+}
