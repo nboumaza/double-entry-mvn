@@ -9,13 +9,16 @@ It demonstrates:
 - Achieving, table pagination and CRUD forms.
 - Integrating with a CSS framework (Twitter Bootstrap ).
 
+
 Models
+
 	Note that the domain objects have their "properties" defined as public
 	Here's some interesting reads on Play domain objects
 	http://www.playframework.com/documentation/1.2.3/model
  
 Controllers
-    Business logic is managed in the domain model layer. 
+
+        Business logic is managed in the domain model layer. 
 	For a web or REST client the domain layer is exposed as resources represented by URIs
 	via the controllers and the REST api definition in con/routes
 	Like the HTTP interface, controllers are procedural and Request/Response oriented.
@@ -29,10 +32,14 @@ Controllers
 	(Play documentation are resources so make sure you refer to the latest doc rest service 
 	version, 1.2.3 at the time of writing this readme )
      
+
 Views
+
 	All views are defined using scala template engine
      
+
 Services
+
 	You can optionally expose the domain objects business logic as a SOAP service,
 	or a standalone OSGI bundle or other goodie that you'd like to expose 
 	to a non web and rest client 
